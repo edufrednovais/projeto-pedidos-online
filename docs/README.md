@@ -28,8 +28,8 @@ As tarefas para o próximo sprint (TP2) estão listadas na coluna **TODO**.
 ---
 
 ## 📊 Diagrama de Caso de Uso
-![Diagrama de Caso de Uso](docs/casos_de_uso.png)
+![Diagrama de Caso de Uso](casos_de_uso.png)
 
 O diagrama acima foi elaborado utilizando **PlantUML**.  
-O código fonte está disponível em [`docs/casos_de_uso.puml`](docs/casos_de_uso.puml).
+O código fonte está disponível em [`docs/casos_de_uso.puml`](casos_de_uso.puml).
 
