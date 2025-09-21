@@ -1,1 +1,29 @@
-casos_de_uso.puml
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+
+actor Cliente
+actor Restaurante
+actor Entregador
+actor Administrador
+
+Cliente --> (Fazer Pedido)
+Cliente --> (Cadastrar-se)
+Cliente --> (Avaliar Pedido)
+
+(Fazer Pedido) --> (Selecionar Restaurante) : include
+(Fazer Pedido) --> (Escolher Prato) : include
+(Fazer Pedido) --> (Efetuar Pagamento) : include
+(Fazer Pedido) ..> (Cancelar Pedido) : extend
+
+Restaurante --> (Receber Pedido)
+Restaurante --> (Atualizar Cardápio)
+
+Entregador --> (Aceitar Entrega)
+Entregador --> (Entregar Pedido)
+
+Administrador --> (Gerenciar Usuários)
+Administrador --> (Gerenciar Restaurantes)
+
+@enduml
+
