@@ -32,4 +32,5 @@ As tarefas para o próximo sprint (TP2) estão listadas na coluna **TODO**.
 
 O diagrama acima foi elaborado utilizando **PlantUML**.  
 O código fonte está disponível em [`docs/casos_de_uso.puml`](casos_de_uso.puml).
+[os requisitos foram](requisitos.md)
 
