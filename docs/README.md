@@ -35,3 +35,7 @@ O código fonte está disponível em [`docs/casos_de_uso.puml`](casos_de_uso.pum
 
 ![os requisitos foram](requisitos.md)
 
+"Este projeto foi estruturado seguindo boas práticas de arquitetura de software. Você pode visualizar os diagramas C4 e os detalhes técnicos 
+Para compreender melhor as decisões arquiteturais e os diagramas C4 que sustentam este projeto, consulte a documentação completa em 
+
+
