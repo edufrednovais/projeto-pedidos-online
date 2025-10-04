@@ -13,10 +13,10 @@ O usuário acessa via navegador, interage com a interface e envia dados para o b
 
 ## 3. Arquitetura do Sistema
 ### Diagrama de Contexto
-![Diagrama de Contexto](Captura de tela 2025-10-04 172653.png)
+![Diagrama de Contexto](C4_Context.png)
 
 ### Diagrama de Contêineres
-![Diagrama de Contêineres](Captura de tela 2025-10-04 172653.png)
+![Diagrama de Contêineres](C4_Container.png)
 
 ## 4. Justificativa do Modelo
 - A arquitetura cliente-servidor foi escolhida por ser adequada para aplicações web modernas.  
