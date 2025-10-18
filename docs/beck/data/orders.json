@@ -1,1 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "Pizzaria do João",
+    "category": "Pizza",
+    "time": "30min",
+    "menu": [
+      { "id": 1, "name": "Pizza Margherita", "price": 30 },
+      { "id": 2, "name": "Pizza Calabresa", "price": 35 }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Lanches da Ana",
+    "category": "Lanche",
+    "time": "25min",
+    "menu": [
+      { "id": 1, "name": "X-Burguer", "price": 20 },
+      { "id": 2, "name": "X-Salada", "price": 22 }
+    ]
+  }
+]
 
