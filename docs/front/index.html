@@ -1,1 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lista de Restaurantes</title>
+</head>
+<body>
+<h1>Restaurantes</h1>
+<ul id="list"></ul>
+
+<script>
+fetch("http://localhost:3000/restaurants")
+  .then(res => res.json())
+  .then(data => {
+    const list = document.getElementById("list");
+    data.forEach(r => {
+      const li = document.createElement("li");
+      li.innerHTML = `<strong>${r.name}</strong> - ${r.category} - ${r.time} <a href="menu.html?id=${r.id}">Ver Cardápio</a>`;
+      list.appendChild(li);
+    });
+  });
+</script>
+</body>
+</html>
 
