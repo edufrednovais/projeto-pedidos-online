@@ -1,1 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cardápio</title>
+</head>
+<body>
+<h1>Cardápio</h1>
+<ul id="menu"></ul>
+<button id="checkout">Enviar Pedido</button>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const restaurantId = params.get("id");
+let selectedItems = [];
+
+fetch(`http://localhost:3000/restaurants/${restaurantId}/menu`)
+  .then(res => res.json())
+  .then(data => {
+    const menu = document.getElementById("menu");
+    data.forEach(item=>{
+      const li = document.createElement("li");
+      li.innerHTML = `${item.name} - R$${item.price} <button>Adicionar</button>`;
+      li.querySelector("button").addEventListener("click", ()=>selectedItems.push(item));
+      menu.appendChild(li);
+    });
+  });
+
+document.getElementById("checkout").addEventListener("click", ()=>{
+  fetch("http://localhost:3000/orders", {
+    method:"POST",
+    headers:{ "Content-Type":"application/json" },
+    body: JSON.stringify({
+      clientId: Date.now(),
+      restaurantId: restaurantId,
+      items: selectedItems,
+      total: selectedItems.reduce((sum,i)=>sum+i.price,0)
+    })
+  }).then(res=>res.json()).then(data=>alert("Pedido enviado! ID: "+data.orderId));
+});
+</script>
+</body>
+</html>
 
